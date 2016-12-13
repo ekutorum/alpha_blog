@@ -12,8 +12,7 @@ $navbar-default-bg: black;
 }
 
 #logo:hover {
-  color: #006600;
-  font-style: italic;
+  color: #33cc33;
   text-decoration: none;
 }
 
@@ -40,22 +39,26 @@ $navbar-default-bg: black;
 
 .description {
   margin-top: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .article-title {
   font-weight: bold;
   font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .article-body {
   border-top: 1px solid #eaeaea;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer {
