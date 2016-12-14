@@ -1,8 +1,60 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+$(function(){
+    $('[data-toggle="popover"]').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    });
+});
+
+$(function(){
+    $('[rel="popover"]').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    });
+});
+</script>
+</head>
+
 <h1> About </h1>
-<div>
-  <p1>This is the about page.</p1>
-  <p1>It has nothing yet.</p1>
+<a href="#" rel="popover" data-popover-content="#myPopover">My Popover</a>
+<div id="myPopover" class="hide">
+	This is a popover list:
+<ul class='media-list'>
+  <li class='media'>
+    <div class='media-left'>
+      <i class="fa fa-car"></i>
+    </div>
+    <div class='media-body'>
+      <h4 class='media-heading'>This is a little car</h4>
+    </div>
+  </li>
+    <li class='media'>
+    <div class='media-left'>
+      <i class="fa fa-car"></i>
+    </div>
+    <div class='media-body'>
+      <div class='media-heading'>This, too, is a little car</div>
+    </div>
+  </li>
+</ul>
 </div>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Icon Legend" 
+  data-popover-content="#myPopover">Click to toggle popover</button>
+
 <div>
   <%= link_to "Home", root_path %>
 </div>
