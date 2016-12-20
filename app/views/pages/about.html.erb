@@ -30,7 +30,27 @@ $(function(){
 </head>
 
 <h1> About </h1>
-<a href="#" rel="popover" data-popover-content="#myPopover">My Popover</a>
+
+<table id='fake-table' class='fixed-header-table'>
+  <thead>
+    <tr>
+      <th>
+        <a href="#" rel="popover" data-popover-content="#myPopover">My Popover</a>
+      </th>
+      <th>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Icon Legend" 
+        data-popover-content="#myPopover">Click to toggle popover</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Column1</td>
+      <td>Column2</td>
+    </tr>
+  </tbody>
+</table>
+
 <div id="myPopover" class="hide">
 	This is a popover list:
 <ul class='media-list'>
@@ -52,8 +72,6 @@ $(function(){
   </li>
 </ul>
 </div>
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Icon Legend" 
-  data-popover-content="#myPopover">Click to toggle popover</button>
 
 <div>
   <%= link_to "Home", root_path %>
